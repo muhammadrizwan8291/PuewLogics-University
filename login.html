@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=REM:ital,wght@0,300;1,300&display=swap');
+
+*{
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+
+}
+:root{
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    
+}
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(sigup.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+  }
+
+  .form-container {
+    background: var(--bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(232, 225, 225, 0.1);
+    width: 350px;
+  }
+  .form-container .heading{
+    color: var(--main-color);
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .form-container .input-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+
+  .form-container .input-box input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  
+
+   .sub-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+   }
+  .form-container .sub-link button {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .form-container .sub-link button:hover {
+    background-color: var(--text-color);
+    border: .2rem solid var(--main-color);
+    color: var(--bg-color);
+
+  }
+  .form-container .sub-link  a{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    padding-right: 1rem;
+    color: var(--main-color);
+  }
+    
+  #response {
+    display: none;
+    margin-top: 3px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2 class="heading">Login</h2>
+    <form id="loginForm">
+    
+     <div class="input-box">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter Email" required>
+     </div>
+
+      <div class="input-box">
+        <label for="email">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter Password" required>
+      </div>
+      
+      <div class="sub-link">
+        <button type="submit" id="logintBtn">Login</button>
+        <a href="index.html">Register</a>
+      </div>
+    </form>
+    <div id="response"></div>
+  </div>
+<script >
+   document.getElementById("loginForm").addEventListener("submit", function(event) {
+         // Prevent the form from submitting and page from reloading
+         event.preventDefault();
+        
+        const username = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        if (username == "ali@123" && password == "123") {
+           window.location.href = "main.html";
+        } else {
+          alert("Envalid Email and Password");
+        }
+    });
+</script>
+</body>
+</html>

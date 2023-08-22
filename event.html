@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+   
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Bootstrap" width="50" height="34" />
+            <b style="padding-left: 15px">Grow_Mind</b>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="main.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="dep.html">Department</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="event.html">Event</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Logout</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container" style="padding: 7% 0 7%;">
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-5 ">
+                <h2 class="featurette-heading fw-normal lh-1">Anual <span
+                        class="text-muted">Sports</span></h2>
+                <p class="lead">University sports teams participate in various competitions, and universities often host sports events like games, matches, and tournaments. These events foster school spirit and a sense of community.</p>
+            </div>
+            <div class="col-md-5" >
+                <img class="img-fluid" width="500" height="300" src="s.jpg">
+
+
+
+            </div>
+        </div>
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-5 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">Career Fairs& <span
+                        class="text-muted">Job Expo</span></h2>
+                <p class="lead"> Career fairs allow students to interact with potential employers, learn about job opportunities, and explore career paths. Employers often visit universities to recruit students for internships and full-time positions.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="img-fluid" width="500" height="300" src="j.jpg">
+
+            </div>
+        </div>
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-5">
+                <h2 class="featurette-heading fw-normal lh-1">Cultural <span class="text-muted">Festivel</span></h2>
+                <p class="lead">Many universities have cultural festivals celebrating diversity and showcasing different cultures through performances, food, music, and art. These events promote cross-cultural understanding and unity.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid" width="500" height="300" src="c.jpg">
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="footer-column">
+        <p>All rights reserved &copy; 2023 </p>
+      </div>
+      <div class="footer-column">
+        <div class="social-icons">
+          <span class="social-icon"><a href="https://www.linkedin.com/in/muhammad-rizwan-5a4756234/"><i class='bx bxl-linkedin' ></i></a></span>
+          <span class="social-icon"><a href="https://mail.google.com/mail/u/1/#inbox"><i class='bx bxl-gmail'></i></a></span>
+          <span class="social-icon"><a href="https://web.facebook.com/?_rdc=1&_rdr"><i class='bx bxl-facebook' ></i></a></span>
+        </div>
+      </div>
+      <div class="footer-column">
+        <span class="up-icon" onclick="scrollToTop()"><i class='bx bx-chevrons-up' style="color: aliceblue;"></i></span>
+      </div>
+    </footer>
+    
+    <script>
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

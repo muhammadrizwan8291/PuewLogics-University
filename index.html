@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=REM:ital,wght@0,300;1,300&display=swap');
+
+*{
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+
+}
+:root{
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    
+}
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(sigup.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+  }
+
+  .form-container {
+    background: var(--bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(232, 225, 225, 0.1);
+    width: 350px;
+  }
+  .form-container .heading{
+    color: var(--main-color);
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .form-container .input-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+
+  .form-container .input-box input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  
+
+   .sub-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+   }
+  .form-container .sub-link button {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .form-container .sub-link button:hover {
+    background-color: var(--text-color);
+    border: .2rem solid var(--main-color);
+    color: var(--bg-color);
+
+  }
+  .form-container .sub-link  a{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    padding-right: 1rem;
+    color: var(--main-color);
+  }
+    
+  #response {
+    display: none;
+    margin-top: 3px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2 class="heading">Signup</h2>
+    <form id="submitForm">
+       
+      <div class="input-box">
+        <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter Name" required>
+      </div>
+      
+     <div class="input-box">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter Email" required>
+     </div>
+
+      <div class="input-box">
+        <label for="email">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter Password" required>
+      </div>
+      
+      <div class="sub-link">
+        <button type="submit" id="submitBtn">Register</button>
+        <a href="login.html">Login</a>
+      </div>
+    </form>
+    <div id="response"></div>
+  </div>
+<script >
+  document.getElementById("submitForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Get form data
+    const formData = new FormData(event.target);
+
+    // Getting values
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    // Perform form submission
+    const successMessage = '<div class="alert alert-success">You are Registered successfully!</div>';
+    document.getElementById("response").innerHTML = successMessage;
+    document.getElementById("response").style.display = "block";
+
+    // Log the success message and form data to the console
+    console.log("Form submitted successfully!");
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Password:", password);
+
+    // Hide the submit button after successful submission
+    const submitButton = document.getElementById("submitBtn");
+    if (submitButton) {
+        submitButton.style.display = "none";
+    }
+
+    // Clear form fields after successful submission
+    document.getElementById("submitForm").reset();
+});
+
+</script>
+</body>
+</html>
